@@ -15,7 +15,7 @@ cors <- function(req, res) {
     res$status <- 200
     return(list())
   } else {
-    plumber::forward()
+    return(res)
   }
 }
 
