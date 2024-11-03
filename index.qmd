@@ -1,49 +1,70 @@
 ---
-title: "Data Explorer"
+title: "Data Explorer API and Shiny App"
 ---
 
-```{r, echo=FALSE}
-library(DT)
-```
+## API in R
+
+Die API wurde mit dem R-Paket [plumber](https://www.rplumber.io/) erstellt. Plumber ermöglicht es, R-Funktionen als HTTP-Endpunkte bereitzustellen. Das Paket wandelt R-Funktionen automatisch in eine REST API um, indem spezielle Kommentare verwendet werden, die den Endpunkt und die HTTP-Methode definieren. Die API kann dann lokal oder auf einem Server gehostet werden.
+
+[Code](https://github.com/cynkra/sgods/blob/main/api/plumber.R)
 
 
-### Alternative Data Explorer
+## Data Explorer
+
+Es gibt verschiedene Möglichkeiten, um einen Data Explorer zu erstellen. Wir untersuchen drei verschiedene Ansätze:
+
+
+### Standard Webtechnologien (z.B. Vue.js)
+
+Das ist eine non-R-Lösung, die auf einem beliebigen Webserver gehostet werden kann. Trotzdem relativ einfach zu implementieren:
+
+Live: [Demo](https://cynkra.github.io/sgods/vue/)
+
+Code: [GitHub](https://github.com/cynkra/sgods/blob/main/docs/vue/index.html)
+
+
+#### Vorteile
+
+- Standard Webtechnologien
+
+#### Nachteile
+
+- JavaScript- und HTML-Kenntnisse werden benötigt, R ist nicht ausreichend
 
 
 
 
+### R Shiny
 
-### Select Dataset and Format
+Shiny ist ein offensichtlicher Kandidat.
 
-<label for="dataset">Select Dataset:</label>
-<select id="dataset">
-  <option value="mtcars">mtcars</option>
-  <option value="cars">cars</option>
-</select>
+Live: [Demo](https://connect.cynkra.com/sgods-app/)
 
-<h3>Data Preview</h3>
+Code: [GitHub](https://github.com/cynkra/sgods/blob/main/shiny/app.R)
 
-<div id="dataTable">
-```{r dataTable, echo=FALSE, results='asis'}
-# Placeholder content
-```
-</div>
+#### Vorteile
 
-<label for="format">Select Format:</label>
-<select id="format">
-  <option value="json">json</option>
-  <option value="csv">csv</option>
-  <option value="excel">excel</option>
-  <option value="parquet">parquet</option>
-</select>
+- Kann in R geschrieben werden
 
-<button id="downloadButton">Download Data</button>
+#### Nachteile
+
+- Benötigt Connect und Shiny Server
 
 
-<!-- Include DataTables CSS and JS -->
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
-<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
 
-<!-- Link to the external JavaScript file -->
-<script src="data-explorer.js"></script>
+
+### R + Quarto
+
+Live: [Demo](https://cynkra.github.io/sgods/explorer.html)
+
+Code: [GitHub](https://github.com/cynkra/sgods/blob/main/explorer.qmd)
+
+
+#### Vorteile
+
+- Kann in R geschrieben werden
+- Gestaltungsmöglichkeiten von Quarto
+
+#### Nachteile
+
+- Keine

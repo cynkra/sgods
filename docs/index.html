@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Explorer – quarto</title>
+<title>Data Explorer API and Shiny App – quarto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="./explorer.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -112,8 +112,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#alternative-data-explorer" id="toc-alternative-data-explorer" class="nav-link active" data-scroll-target="#alternative-data-explorer">Alternative Data Explorer</a></li>
-  <li><a href="#select-dataset-and-format" id="toc-select-dataset-and-format" class="nav-link" data-scroll-target="#select-dataset-and-format">Select Dataset and Format</a></li>
+  <li><a href="#api-in-r" id="toc-api-in-r" class="nav-link active" data-scroll-target="#api-in-r">API in R</a></li>
+  <li><a href="#data-explorer" id="toc-data-explorer" class="nav-link" data-scroll-target="#data-explorer">Data Explorer</a>
+  <ul class="collapse">
+  <li><a href="#standard-webtechnologien-z.b.-vue.js" id="toc-standard-webtechnologien-z.b.-vue.js" class="nav-link" data-scroll-target="#standard-webtechnologien-z.b.-vue.js">Standard Webtechnologien (z.B. Vue.js)</a></li>
+  <li><a href="#r-shiny" id="toc-r-shiny" class="nav-link" data-scroll-target="#r-shiny">R Shiny</a></li>
+  <li><a href="#r-quarto" id="toc-r-quarto" class="nav-link" data-scroll-target="#r-quarto">R + Quarto</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -122,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data Explorer</h1>
+<h1 class="title">Data Explorer API and Shiny App</h1>
 </div>
 
 
@@ -139,30 +144,70 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="alternative-data-explorer" class="level3">
-<h3 class="anchored" data-anchor-id="alternative-data-explorer">Alternative Data Explorer</h3>
+<section id="api-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="api-in-r">API in R</h2>
+<p>Die API wurde mit dem R-Paket <a href="https://www.rplumber.io/">plumber</a> erstellt. Plumber ermöglicht es, R-Funktionen als HTTP-Endpunkte bereitzustellen. Das Paket wandelt R-Funktionen automatisch in eine REST API um, indem spezielle Kommentare verwendet werden, die den Endpunkt und die HTTP-Methode definieren. Die API kann dann lokal oder auf einem Server gehostet werden.</p>
+<p><a href="https://github.com/cynkra/sgods/blob/main/api/plumber.R">Code</a></p>
 </section>
-<section id="select-dataset-and-format" class="level3">
-<h3 class="anchored" data-anchor-id="select-dataset-and-format">Select Dataset and Format</h3>
-<p><label for="dataset">Select Dataset:</label> <select id="dataset"> <option value="mtcars">mtcars</option> <option value="cars">cars</option> </select></p>
-<h3 class="anchored">
-Data Preview
-</h3>
-<div id="dataTable">
+<section id="data-explorer" class="level2">
+<h2 class="anchored" data-anchor-id="data-explorer">Data Explorer</h2>
+<p>Es gibt verschiedene Möglichkeiten, um einen Data Explorer zu erstellen. Wir untersuchen drei verschiedene Ansätze:</p>
+<section id="standard-webtechnologien-z.b.-vue.js" class="level3">
+<h3 class="anchored" data-anchor-id="standard-webtechnologien-z.b.-vue.js">Standard Webtechnologien (z.B. Vue.js)</h3>
+<p>Das ist eine non-R-Lösung, die auf einem beliebigen Webserver gehostet werden kann. Trotzdem relativ einfach zu implementieren:</p>
+<p>Live: <a href="https://cynkra.github.io/sgods/vue/">Demo</a></p>
+<p>Code: <a href="https://github.com/cynkra/sgods/blob/main/docs/vue/index.html">GitHub</a></p>
+<section id="vorteile" class="level4">
+<h4 class="anchored" data-anchor-id="vorteile">Vorteile</h4>
+<ul>
+<li>Standard Webtechnologien</li>
+</ul>
+</section>
+<section id="nachteile" class="level4">
+<h4 class="anchored" data-anchor-id="nachteile">Nachteile</h4>
+<ul>
+<li>JavaScript- und HTML-Kenntnisse werden benötigt, R ist nicht ausreichend</li>
+</ul>
+</section>
+</section>
+<section id="r-shiny" class="level3">
+<h3 class="anchored" data-anchor-id="r-shiny">R Shiny</h3>
+<p>Shiny ist ein offensichtlicher Kandidat.</p>
+<p>Live: <a href="https://connect.cynkra.com/sgods-app/">Demo</a></p>
+<p>Code: <a href="https://github.com/cynkra/sgods/blob/main/shiny/app.R">GitHub</a></p>
+<section id="vorteile-1" class="level4">
+<h4 class="anchored" data-anchor-id="vorteile-1">Vorteile</h4>
+<ul>
+<li>Kann in R geschrieben werden</li>
+</ul>
+</section>
+<section id="nachteile-1" class="level4">
+<h4 class="anchored" data-anchor-id="nachteile-1">Nachteile</h4>
+<ul>
+<li>Benötigt Connect und Shiny Server</li>
+</ul>
+</section>
+</section>
+<section id="r-quarto" class="level3">
+<h3 class="anchored" data-anchor-id="r-quarto">R + Quarto</h3>
+<p>Live: <a href="https://cynkra.github.io/sgods/explorer.html">Demo</a></p>
+<p>Code: <a href="https://github.com/cynkra/sgods/blob/main/explorer.qmd">GitHub</a></p>
+<section id="vorteile-2" class="level4">
+<h4 class="anchored" data-anchor-id="vorteile-2">Vorteile</h4>
+<ul>
+<li>Kann in R geschrieben werden</li>
+<li>Gestaltungsmöglichkeiten von Quarto</li>
+</ul>
+</section>
+<section id="nachteile-2" class="level4">
+<h4 class="anchored" data-anchor-id="nachteile-2">Nachteile</h4>
+<ul>
+<li>Keine</li>
+</ul>
 
-</div>
-<p><label for="format">Select Format:</label> <select id="format"> <option value="json">json</option> <option value="csv">csv</option> <option value="excel">excel</option> <option value="parquet">parquet</option> </select></p>
-<button id="downloadButton">
-Download Data
-</button>
-<!-- Include DataTables CSS and JS -->
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
-<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
-<!-- Link to the external JavaScript file -->
-<script src="data-explorer.js"></script>
 
-
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->

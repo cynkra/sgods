@@ -1,0 +1,45 @@
+---
+title: "About"
+---
+
+
+
+```{r, echo=FALSE}
+library(DT)
+```
+
+
+### Select Dataset and Format
+
+<label for="dataset">Select Dataset:</label>
+<select id="dataset">
+  <option value="mtcars">mtcars</option>
+  <option value="cars">cars</option>
+</select>
+
+<h3>Data Preview</h3>
+
+<div id="dataTable">
+```{r dataTable, echo=FALSE, results='asis'}
+# Placeholder content
+```
+</div>
+
+<label for="format">Select Format:</label>
+<select id="format">
+  <option value="json">json</option>
+  <option value="csv">csv</option>
+  <option value="excel">excel</option>
+  <option value="parquet">parquet</option>
+</select>
+
+<button id="downloadButton">Download Data</button>
+
+
+<!-- Include DataTables CSS and JS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+
+<!-- Link to the external JavaScript file -->
+<script src="data-explorer.js"></script>
