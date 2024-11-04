@@ -75,4 +75,4 @@ Code: [GitHub](https://github.com/cynkra/sgods/blob/main/explorer.qmd)
 
 ### Weitere Ideen
 
-- Daten auf https://opendata.swiss veröffentlichen?
+- Daten auf [opendata.swiss](https://opendata.swiss) veröffentlichen? Denke, man kann das via API machen.
