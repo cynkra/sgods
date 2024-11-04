@@ -23,7 +23,7 @@
   {
     "objectID": "explorer.html",
     "href": "explorer.html",
-    "title": "About",
+    "title": "Quarto Data Explorer",
     "section": "",
     "text": "Select Dataset and Format\nSelect Dataset:  mtcars cars \n\nData Preview\n\n\n\n\nSelect Format:  json csv excel parquet \n\nDownload Data"
   }
