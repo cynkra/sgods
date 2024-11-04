@@ -4,21 +4,21 @@
     "href": "index.html",
     "title": "Data Explorer API and Shiny App",
     "section": "",
-    "text": "Die API wurde mit dem R-Paket plumber erstellt. Plumber ermöglicht es, R-Funktionen als HTTP-Endpunkte bereitzustellen. Das Paket wandelt R-Funktionen automatisch in eine REST API um, indem spezielle Kommentare verwendet werden, die den Endpunkt und die HTTP-Methode definieren. Die API kann dann lokal oder auf einem Server gehostet werden.\nCode"
+    "text": "Die API wurde mit dem R-Paket plumber erstellt. Plumber ermöglicht es, R-Funktionen als HTTP-Endpunkte bereitzustellen. Das Paket wandelt R-Funktionen automatisch in eine REST API um, indem spezielle Kommentare verwendet werden, die den Endpunkt und die HTTP-Methode definieren. Die API kann dann lokal oder auf einem Server gehostet werden.\nLive: Swagger UI Demo\nCode: GitHub"
   },
   {
     "objectID": "index.html#api-in-r",
     "href": "index.html#api-in-r",
     "title": "Data Explorer API and Shiny App",
     "section": "",
-    "text": "Die API wurde mit dem R-Paket plumber erstellt. Plumber ermöglicht es, R-Funktionen als HTTP-Endpunkte bereitzustellen. Das Paket wandelt R-Funktionen automatisch in eine REST API um, indem spezielle Kommentare verwendet werden, die den Endpunkt und die HTTP-Methode definieren. Die API kann dann lokal oder auf einem Server gehostet werden.\nCode"
+    "text": "Die API wurde mit dem R-Paket plumber erstellt. Plumber ermöglicht es, R-Funktionen als HTTP-Endpunkte bereitzustellen. Das Paket wandelt R-Funktionen automatisch in eine REST API um, indem spezielle Kommentare verwendet werden, die den Endpunkt und die HTTP-Methode definieren. Die API kann dann lokal oder auf einem Server gehostet werden.\nLive: Swagger UI Demo\nCode: GitHub"
   },
   {
     "objectID": "index.html#data-explorer",
     "href": "index.html#data-explorer",
     "title": "Data Explorer API and Shiny App",
     "section": "Data Explorer",
-    "text": "Data Explorer\nEs gibt verschiedene Möglichkeiten, um einen Data Explorer zu erstellen. Wir untersuchen drei verschiedene Ansätze:\n\nStandard Webtechnologien (z.B. Vue.js)\nDas ist eine non-R-Lösung, die auf einem beliebigen Webserver gehostet werden kann. Trotzdem relativ einfach zu implementieren:\nLive: Demo\nCode: GitHub\n\nVorteile\n\nStandard Webtechnologien\n\n\n\nNachteile\n\nJavaScript- und HTML-Kenntnisse werden benötigt, R ist nicht ausreichend\n\n\n\n\nR Shiny\nShiny ist ein offensichtlicher Kandidat.\nLive: Demo\nCode: GitHub\n\nVorteile\n\nKann in R geschrieben werden\n\n\n\nNachteile\n\nBenötigt Connect und Shiny Server\n\n\n\n\nR + Quarto\nLive: Demo\nCode: GitHub\n\nVorteile\n\nKann in R geschrieben werden\nGestaltungsmöglichkeiten von Quarto\n\n\n\nNachteile\n\nKeine"
+    "text": "Data Explorer\nEs gibt verschiedene Möglichkeiten, um einen Data Explorer zu erstellen. Wir untersuchen drei verschiedene Ansätze:\n\nStandard Webtechnologien (z.B. Vue.js)\nDas ist eine non-R-Lösung, die auf einem beliebigen Webserver gehostet werden kann. Trotzdem ist sie relativ einfach zu implementieren:\nLive: Vue.js Demo\nCode: GitHub\n\nVorteile\n\nStandard Webtechnologien\nSehr viele Freiheiten in der Gestaltung\n\n\n\nNachteile\n\nJavaScript- und HTML-Kenntnisse werden benötigt, R ist nicht ausreichend\n\n\n\n\nR Shiny\nShiny ist ein offensichtlicher Kandidat.\nLive: Shiny App Demo\nCode: GitHub\n\nVorteile\n\nKann in R geschrieben werden\n\n\n\nNachteile\n\nBenötigt Connect und Shiny Server\nBeträchtlicher Overhead\n\n\n\n\nR + Quarto\nLive: Demo\nCode: GitHub\n\nVorteile\n\nKann in R geschrieben werden\nGestaltungsmöglichkeiten von Quarto\n\n\n\nNachteile\n\nGestaltungsmöglichkeiten von Quarto\n\n\n\n\nWeitere Ideen\n\nDaten auf https://opendata.swiss veröffentlichen?"
   },
   {
     "objectID": "explorer.html",

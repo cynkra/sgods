@@ -118,6 +118,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#standard-webtechnologien-z.b.-vue.js" id="toc-standard-webtechnologien-z.b.-vue.js" class="nav-link" data-scroll-target="#standard-webtechnologien-z.b.-vue.js">Standard Webtechnologien (z.B. Vue.js)</a></li>
   <li><a href="#r-shiny" id="toc-r-shiny" class="nav-link" data-scroll-target="#r-shiny">R Shiny</a></li>
   <li><a href="#r-quarto" id="toc-r-quarto" class="nav-link" data-scroll-target="#r-quarto">R + Quarto</a></li>
+  <li><a href="#weitere-ideen" id="toc-weitere-ideen" class="nav-link" data-scroll-target="#weitere-ideen">Weitere Ideen</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -147,20 +148,22 @@ ul.task-list li input[type="checkbox"] {
 <section id="api-in-r" class="level2">
 <h2 class="anchored" data-anchor-id="api-in-r">API in R</h2>
 <p>Die API wurde mit dem R-Paket <a href="https://www.rplumber.io/">plumber</a> erstellt. Plumber ermöglicht es, R-Funktionen als HTTP-Endpunkte bereitzustellen. Das Paket wandelt R-Funktionen automatisch in eine REST API um, indem spezielle Kommentare verwendet werden, die den Endpunkt und die HTTP-Methode definieren. Die API kann dann lokal oder auf einem Server gehostet werden.</p>
-<p><a href="https://github.com/cynkra/sgods/blob/main/api/plumber.R">Code</a></p>
+<p>Live: <a href="https://connect.cynkra.com/sgods-api/">Swagger UI Demo</a></p>
+<p>Code: <a href="https://github.com/cynkra/sgods/blob/main/api/plumber.R">GitHub</a></p>
 </section>
 <section id="data-explorer" class="level2">
 <h2 class="anchored" data-anchor-id="data-explorer">Data Explorer</h2>
 <p>Es gibt verschiedene Möglichkeiten, um einen Data Explorer zu erstellen. Wir untersuchen drei verschiedene Ansätze:</p>
 <section id="standard-webtechnologien-z.b.-vue.js" class="level3">
 <h3 class="anchored" data-anchor-id="standard-webtechnologien-z.b.-vue.js">Standard Webtechnologien (z.B. Vue.js)</h3>
-<p>Das ist eine non-R-Lösung, die auf einem beliebigen Webserver gehostet werden kann. Trotzdem relativ einfach zu implementieren:</p>
-<p>Live: <a href="https://cynkra.github.io/sgods/vue/">Demo</a></p>
+<p>Das ist eine non-R-Lösung, die auf einem beliebigen Webserver gehostet werden kann. Trotzdem ist sie relativ einfach zu implementieren:</p>
+<p>Live: <a href="https://cynkra.github.io/sgods/vue/">Vue.js Demo</a></p>
 <p>Code: <a href="https://github.com/cynkra/sgods/blob/main/docs/vue/index.html">GitHub</a></p>
 <section id="vorteile" class="level4">
 <h4 class="anchored" data-anchor-id="vorteile">Vorteile</h4>
 <ul>
 <li>Standard Webtechnologien</li>
+<li>Sehr viele Freiheiten in der Gestaltung</li>
 </ul>
 </section>
 <section id="nachteile" class="level4">
@@ -173,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="r-shiny" class="level3">
 <h3 class="anchored" data-anchor-id="r-shiny">R Shiny</h3>
 <p>Shiny ist ein offensichtlicher Kandidat.</p>
-<p>Live: <a href="https://connect.cynkra.com/sgods-app/">Demo</a></p>
+<p>Live: <a href="https://connect.cynkra.com/sgods-app/">Shiny App Demo</a></p>
 <p>Code: <a href="https://github.com/cynkra/sgods/blob/main/shiny/app.R">GitHub</a></p>
 <section id="vorteile-1" class="level4">
 <h4 class="anchored" data-anchor-id="vorteile-1">Vorteile</h4>
@@ -185,6 +188,7 @@ ul.task-list li input[type="checkbox"] {
 <h4 class="anchored" data-anchor-id="nachteile-1">Nachteile</h4>
 <ul>
 <li>Benötigt Connect und Shiny Server</li>
+<li>Beträchtlicher Overhead</li>
 </ul>
 </section>
 </section>
@@ -202,11 +206,17 @@ ul.task-list li input[type="checkbox"] {
 <section id="nachteile-2" class="level4">
 <h4 class="anchored" data-anchor-id="nachteile-2">Nachteile</h4>
 <ul>
-<li>Keine</li>
+<li>Gestaltungsmöglichkeiten von Quarto</li>
+</ul>
+</section>
+</section>
+<section id="weitere-ideen" class="level3">
+<h3 class="anchored" data-anchor-id="weitere-ideen">Weitere Ideen</h3>
+<ul>
+<li>Daten auf https://opendata.swiss veröffentlichen?</li>
 </ul>
 
 
-</section>
 </section>
 </section>
 

@@ -6,7 +6,9 @@ title: "Data Explorer API and Shiny App"
 
 Die API wurde mit dem R-Paket [plumber](https://www.rplumber.io/) erstellt. Plumber ermöglicht es, R-Funktionen als HTTP-Endpunkte bereitzustellen. Das Paket wandelt R-Funktionen automatisch in eine REST API um, indem spezielle Kommentare verwendet werden, die den Endpunkt und die HTTP-Methode definieren. Die API kann dann lokal oder auf einem Server gehostet werden.
 
-[Code](https://github.com/cynkra/sgods/blob/main/api/plumber.R)
+Live: [Swagger UI Demo](https://connect.cynkra.com/sgods-api/)
+
+Code: [GitHub](https://github.com/cynkra/sgods/blob/main/api/plumber.R)
 
 
 ## Data Explorer
@@ -16,9 +18,9 @@ Es gibt verschiedene Möglichkeiten, um einen Data Explorer zu erstellen. Wir un
 
 ### Standard Webtechnologien (z.B. Vue.js)
 
-Das ist eine non-R-Lösung, die auf einem beliebigen Webserver gehostet werden kann. Trotzdem relativ einfach zu implementieren:
+Das ist eine non-R-Lösung, die auf einem beliebigen Webserver gehostet werden kann. Trotzdem ist sie relativ einfach zu implementieren:
 
-Live: [Demo](https://cynkra.github.io/sgods/vue/)
+Live: [Vue.js Demo](https://cynkra.github.io/sgods/vue/)
 
 Code: [GitHub](https://github.com/cynkra/sgods/blob/main/docs/vue/index.html)
 
@@ -26,6 +28,7 @@ Code: [GitHub](https://github.com/cynkra/sgods/blob/main/docs/vue/index.html)
 #### Vorteile
 
 - Standard Webtechnologien
+- Sehr viele Freiheiten in der Gestaltung
 
 #### Nachteile
 
@@ -33,12 +36,11 @@ Code: [GitHub](https://github.com/cynkra/sgods/blob/main/docs/vue/index.html)
 
 
 
-
 ### R Shiny
 
 Shiny ist ein offensichtlicher Kandidat.
 
-Live: [Demo](https://connect.cynkra.com/sgods-app/)
+Live: [Shiny App Demo](https://connect.cynkra.com/sgods-app/)
 
 Code: [GitHub](https://github.com/cynkra/sgods/blob/main/shiny/app.R)
 
@@ -49,8 +51,7 @@ Code: [GitHub](https://github.com/cynkra/sgods/blob/main/shiny/app.R)
 #### Nachteile
 
 - Benötigt Connect und Shiny Server
-
-
+- Beträchtlicher Overhead
 
 
 ### R + Quarto
@@ -67,4 +68,11 @@ Code: [GitHub](https://github.com/cynkra/sgods/blob/main/explorer.qmd)
 
 #### Nachteile
 
-- Keine
+- Gestaltungsmöglichkeiten von Quarto
+
+
+
+
+### Weitere Ideen
+
+- Daten auf https://opendata.swiss veröffentlichen?
